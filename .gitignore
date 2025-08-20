@@ -1,18 +1,18 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Archivos de simulación y compilación
+*.out
+*.vcd
+*.fst
+*.lxt
+*.vvp
 
-# Other files and folders
-.settings/
+# Archivos de waves
+*.gtkw
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Archivos temporales de editores
+*~
+*.swp
+*.tmp
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Archivos de sistema
+.DS_Store
+Thumbs.db
