@@ -1,7 +1,7 @@
 /*Diseña una memoria ROM de 16 palabras de 8 bits cada una, que entrega el dato en la dirección
 addr. La memoria debe inicializarse con valores predefinidos en el bloque initial. */
 
-module Ejercicio9 (input wire [3:0] addr, output reg [7:0] data_out)
+module Ejercicio9 (input wire [3:0] addr, output reg [7:0] data_out);
 
 reg [7:0] mem [15:0];
 

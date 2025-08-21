@@ -5,7 +5,7 @@ module Ejercicio9_tb;
   reg [3:0] addr;
   wire [7:0] data_out;
 
-  rom_custom rom_inst(addr, data_out);
+  Ejercicio9 uut(addr, data_out);
 
   initial begin
     $dumpfile("Ejercicio9_tb.vcd");

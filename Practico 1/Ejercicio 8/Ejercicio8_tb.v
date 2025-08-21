@@ -7,7 +7,7 @@ module Ejercicio8_tb;
   reg [7:0] data_in;
   wire [7:0] data_out;
 
-  ram_simple ram_inst(
+  Ejercicio8 uut(
     .clk(clk),
     .we(we),
     .addr(addr),
