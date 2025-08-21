@@ -4,11 +4,23 @@ Entradas: reloj (clk), habilitación escritura (we), dirección (addr ), dato de
 Salida: dato almacenado en la dirección indicada (data_out).
 Debe funcionar escritura en flanco positivo del reloj solo si we está activo.*/
 
-module Ejercicio8 (input wire clk, input wire we, input wire [6:0] addr, input wire [7:0] data_in, output reg [7:0] data_out);)
+module Ejercicio8  #(  
+    parameter DATA_WIDTH = 8,
+    parameter ADDR_WIDTH = 7,
+    parameter MEM_DEPTH = 128
+    )(
+    input clk,
+    input we,
+    input [ADDR_WIDTH-1:0] addr,
+    input [DATA_WIDTH-1:0] data_in,
+    output reg [DATA_WIDTH-1:0] data_out
+    );
+
 
     // definicion de la memoria RAM
     //Memoria declarada como arreglo de registros
-    reg [7:0] mem [0:127]; // 128 direcciones de 8 bits
+    // Memoria declarada como arreglo de registros
+    reg [DATA_WIDTH-1:0] mem [0:MEM_DEPTH-1];// 128 direcciones de 8 bits
 
     always @(posedge clk) begin 
         if (we) begin
